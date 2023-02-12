@@ -1,0 +1,41 @@
+@use "../util/colors" as color;
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0em;
+    width: 100%;
+    padding: 1em 0em;
+    background-color: color.$veryDarkDesaturatedBlue;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 1s ease;
+    border-radius: 10px;
+    .icon {
+        color: rgb(22, 141, 184);
+    }
+    .title {
+        font-size: 1.3rem;
+        padding: 0.5em;
+        margin: 0;
+        color: #fff;
+        transition: 1s ease;
+    }
+    .text {
+        font-size: 0.9rem;
+        color: rgba(221, 205, 199, 0.7);
+    }
+}
+
+.content.light {
+    .msg {
+        background-color: color.$veryLightGray;
+        .title {
+            color: black;
+        }
+        .text {
+            color: gray;
+        }
+    }
+}
